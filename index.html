@@ -7,6 +7,13 @@
     <link rel="stylesheet" href="css/animate.css" />
     <link rel="stylesheet" href="css/style.css" />
     <title>Daniel Portfolio</title>
+
+    <script src="js/ScrollMagic.min.js" async></script>
+    <script src="js/animation.gsap.min.js" async></script>
+    <script src="js/TimelineLite.min.js" async></script>
+    <script src="js/TweenMax.min.js" async></script>
+    <script src="js/CSSPlugin.min.js" async></script>
+    <script src="js/script.js" defer></script>
   </head>
   <body>
     <div class="container navbar">
@@ -67,7 +74,7 @@
           <span class="m-left">e</span>
           <span class="m-left">r</span>
         </h1>
-        <p>CSS / Javascript / React / More</p>
+        <p>HTML / CSS / Javascript / React / More</p>
         <a href="#contact">contact me</a>
       </div>
       <div class="profile-image">
@@ -123,7 +130,7 @@
           </div>
         </div>
       </div>
-      <div class="css">
+      <div class="html">
         <div class="tag-css">
           <p>CSS</p>
         </div>
@@ -133,7 +140,7 @@
           </div>
         </div>
       </div>
-      <div class="javascript">
+      <div class="html">
         <div class="tag-javascript">
           <p>Javascript</p>
         </div>
@@ -143,7 +150,7 @@
           </div>
         </div>
       </div>
-      <div class="react">
+      <div class="html">
         <div class="tag-react">
           <p>React</p>
         </div>
@@ -155,11 +162,62 @@
       </div>
     </div>
 
-    <script src="js/ScrollMagic.min.js"></script>
-    <script src="js/animation.gsap.min.js"></script>
-    <script src="js/TimelineLite.min.js"></script>
-    <script src="js/TweenMax.min.js"></script>
-    <script src="js/CSSPlugin.min.js"></script>
-    <script src="js/script.js"></script>
+    <div class="container-work" id="work">
+      <h1>Work</h1>
+      <div class="work-category">
+        <button id="designing" class="active">Web Designing</button>
+        <button id="frontend">Front End</button>
+        <button id="backend">Back End</button>
+      </div>
+      <div class="category-designing showCategory">
+        <a href=""><img src="img/1.png" alt="" /></a>
+        <a href=""><img src="img/2.png" alt="" /></a>
+        <a href=""><img src="img/3.png" alt="" /></a>
+        <a href=""><img src="img/1.png" alt="" /></a>
+        <a href=""><img src="img/2.png" alt="" /></a>
+        <a href=""><img src="img/3.png" alt="" /></a>
+      </div>
+      <div class="category-designing hideCategory">
+        <a href=""><img src="img/1.png" alt="" /></a>
+        <a href=""><img src="img/2.png" alt="" /></a>
+        <a href=""><img src="img/3.png" alt="" /></a>
+        <a href=""><img src="img/1.png" alt="" /></a>
+        <a href=""><img src="img/2.png" alt="" /></a>
+      </div>
+      <div class="category-designing hideCategory">
+        <a href=""><img src="img/1.png" alt="" /></a>
+        <a href=""><img src="img/2.png" alt="" /></a>
+        <a href=""><img src="img/3.png" alt="" /></a>
+        <a href=""><img src="img/1.png" alt="" /></a>
+      </div>
+    </div>
+
+    <div class="container contact" id="contact">
+      <h1>Contact</h1>
+      <form>
+        <input type="text" name="name" placeholder="Full Name" />
+        <input type="email" placeholder="Email" />
+        <input
+          type="email"
+          placeholder="Kent.Worthington@protonmail.com"
+          disabled
+        />
+        <textarea
+          name="message"
+          cols="30"
+          rows="10"
+          id="message"
+          placeholder="message"
+          cols="30"
+          rows="10"
+        ></textarea>
+        <input type="submit" />
+      </form>
+    </div>
+
+    <footer>
+      <hr />
+      <p>&COPY; Kent Worthington 2020</p>
+    </footer>
   </body>
 </html>
