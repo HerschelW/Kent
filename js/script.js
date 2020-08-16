@@ -3,11 +3,11 @@ console.log("connected");
 const spans = document.querySelectorAll("h1 span");
 spans.forEach((span) =>
   span.addEventListener("mouseover", function (e) {
-    span.classList.add("animated", "runnerBand");
+    span.classList.add("animated", "rubberBand");
   })
 );
 spans.forEach((span) =>
-  span.addEventListener("mouse", function (e) {
+  span.addEventListener("mouseout", function (e) {
     span.classList.add("animated", "rubberBand");
   })
 );
@@ -53,22 +53,32 @@ const scene = new ScrollMagic.Scene({
   .addTo(controller);
 
 const showRequiredCategory = (event) => {
-  const getId = event.getId;
+  const getId = event.target.id;
+  console.log(getId);
   const links = document.querySelectorAll(".work-category button");
   for (let i = 0; i < links.length; i++) {
-    if (links[i].hasAttribute("classs")) {
+    if (links[i].hasAttribute("class")) {
       links[i].classList.remove("active");
     }
   }
-  event.classList.add("active");
+  event.target.classList.add("active");
+  console.log(`.category-${getId}`);
+  const test = "test";
   const getCategory = document.querySelectorAll(`.category-${getId}`);
-  const categories = document.querySelectorAll('div[class^="category-"]');
+  console.log(getCategory);
+  const categories = document.querySelectorAll('div[class ^= "category-"]');
   for (let i = 0; i < categories.length; i++) {
     if (categories[i].hasAttribute("class")) {
       categories[i].classList.remove("showCategory");
       categories[i].classList.add("hideCategory");
     }
   }
-  getCategory.classList.remove("hideCategory");
-  getCategory.classList.add("showCategory");
+  console.log(test);
+  getCategory[0].classList.remove("hideCategory");
+  getCategory[0].classList.add("showCategory");
 };
+
+document.querySelectorAll(
+  "work-category button",
+  addEventListener("click", () => showRequiredCategory(event))
+);
