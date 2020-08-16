@@ -132,9 +132,6 @@ span.m-left {
   height: 100%;
 }
 
-.profile-image {
-}
-
 .profile-image img {
   filter: grayscale(100%);
   width: 450px;
@@ -302,11 +299,11 @@ button.active {
   justify-self: center;
 }
 
-div.hidecategory {
+div.hideCategory {
   display: none;
 }
 
-.showcategory {
+.showCategory {
   display: block;
 }
 
