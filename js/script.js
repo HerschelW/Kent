@@ -16,6 +16,7 @@ const htmlBar = document.querySelectorAll(".bar-html");
 const cssBar = document.querySelectorAll(".bar-css");
 const jsBar = document.querySelectorAll(".bar-javascript");
 const reactBar = document.querySelectorAll(".bar-react");
+const nodeBar = document.querySelectorAll(".bar-node");
 
 let t1 = new TimelineLite();
 
@@ -42,6 +43,12 @@ t1.fromTo(
   0.75,
   { width: `calc(0% - 6px)` },
   { width: `calc(85% - 6px)`, ease: Power4.easeOut }
+);
+t1.fromTo(
+  nodeBar,
+  0.75,
+  { width: `calc(0% - 6px)` },
+  { width: `calc(90% - 6px)`, ease: Power4.easeOut }
 );
 
 const controller = new ScrollMagic.Controller();
